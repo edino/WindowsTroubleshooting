@@ -7,7 +7,7 @@ BACKTITLE="Diagnostics"
 TITLE="Support Access"
 MENU="Choose one of the following options:"
 
-OPTIONS=(1 "Enable Support Access"
+CHOICE=(1 "Enable Support Access"
          2 "Enable Support Access for 1 day"
          3 "Enable Support Access for 2 days"
          4 "Enable Support Access for 1 week"
