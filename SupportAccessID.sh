@@ -1,38 +1,16 @@
 #!/bin/bash
 
-HEIGHT=15
-WIDTH=40
-CHOICE_HEIGHT=4
-BACKTITLE="Diagnostics"
-TITLE="Support Access"
-MENU="Choose one of the following options:"
+items=(1 "Item 1"
+       2 "Item 2")
 
-CHOICE= (1 "Enable Support Access"
-         2 "Enable Support Access for 1 day"
-         3 "Enable Support Access for 2 days"
-         4 "Enable Support Access for 1 week"
-         5 "Enable Support Access for 2 weeks"
-         6 "Enable Support Access for 1 month"
-         7 "Enable Support Access for 2 months")
-
-CHOICE=$(dialog --clear \
-                --backtitle "$BACKTITLE" \
-                --title "$TITLE" \
-                --menu "$MENU" \
-                $HEIGHT $WIDTH $CHOICE_HEIGHT \
-                "${OPTIONS[@]}" \
-                2>&1 >/dev/tty)
-
-clear
+while choice=$(dialog --title "$TITLE" \
+                 --menu "Please select" 10 40 3 "${items[@]}" \
+                 2>&1 >/dev/tty)
     do
     case $choice in
-        1) ;; # psql -U nobody -d corporate -c "update tblsupportaccess set isenable ="1";" && nservice supportaccess:start -ds nosync
-        2) ;; # psql -U nobody -d corporate -c "update tblsupportaccess set isenable ="1",lifetime_duration= '1day';" && nservice supportaccess:start -ds nosync
-        3) ;; # psql -U nobody -d corporate -c "update tblsupportaccess set isenable ="1",lifetime_duration= '2days';" && nservice supportaccess:start -ds nosync
-        4) ;; # psql -U nobody -d corporate -c "update tblsupportaccess set isenable ="1",lifetime_duration= '1week';" && nservice supportaccess:start -ds nosync
-        5) ;; # psql -U nobody -d corporate -c "update tblsupportaccess set isenable ="1",lifetime_duration= '2weeks';" && nservice supportaccess:start -ds nosync
-        6) ;; # psql -U nobody -d corporate -c "update tblsupportaccess set isenable ="1",lifetime_duration= '1month';" && nservice supportaccess:start -ds nosync
-        7) ;; # psql -U nobody -d corporate -c "update tblsupportaccess set isenable ="1",lifetime_duration= '2months';" && nservice supportaccess:start -ds nosync
+        1) ;; # some action on 1
+        2) ;; # some action on 2
+        *) ;; # some action on other
     esac
 done
 clear # clear after user pressed Cancel
