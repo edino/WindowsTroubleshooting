@@ -1,16 +1,16 @@
 ## Text menu in Python
       
 def print_menu():       ## Your menu design here
-    print 30 * "-" , "MENU" , 30 * "-"
-    print "1 Enable Support Access"
-    print "2 Enable Support Access for 1 day"
-    print "3 Enable Support Access for 2 days"
-    print "4 Enable Support Access for 1 week"
-    print "5 Enable Support Access for 2 weeks"
-    print "6 Enable Support Access for 1 month"
-    print "7 Enable Support Access for 2 months"
-    print "0. Exit"
-    print 67 * "-"
+    print (30 * "-" , "MENU" , 30 * "-")
+    print ("1 Enable Support Access)"
+    print ("2 Enable Support Access for 1 day)"
+    print ("3 Enable Support Access for 2 days)"
+    print ("4 Enable Support Access for 1 week)"
+    print ("5 Enable Support Access for 2 weeks)"
+    print ("6 Enable Support Access for 1 month)"
+    print ("7 Enable Support Access for 2 months)"
+    print ("0. Exit)"
+    print (67 * "-")
   
 loop=True      
   
