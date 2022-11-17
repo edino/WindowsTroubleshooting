@@ -9,7 +9,7 @@ MENU="Choose one of the following options:"
 
 menu ("Enable Support Access")
 {
-    echo "1 "Enable Support Access"
+    echo "1 Enable Support Access"
     echo "2 Enable Support Access for 1 day"
     echo "3 Enable Support Access for 2 days"
     echo "4 Enable Support Access for 1 week"
