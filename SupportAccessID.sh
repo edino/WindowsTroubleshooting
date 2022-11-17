@@ -7,13 +7,17 @@ BACKTITLE="Diagnostics"
 TITLE="Support Access"
 MENU="Choose one of the following options:"
 
-OPTIONS=(1 "Enable Support Access"
-         2 "Enable Support Access for 1 day"
-         3 "Enable Support Access for 2 days"
-         4 "Enable Support Access for 1 week"
-         5 "Enable Support Access for 2 weeks"
-         6 "Enable Support Access for 1 month"
-         7 "Enable Support Access for 2 months")
+menu ("Enable Support Access")
+{
+    echo "1 "Enable Support Access"
+    echo "2 Enable Support Access for 1 day"
+    echo "3 Enable Support Access for 2 days"
+    echo "4 Enable Support Access for 1 week"
+    echo "5 Enable Support Access for 2 weeks"
+    echo "6 Enable Support Access for 1 month"
+    echo "7 Enable Support Access for 2 months"
+  exit 0
+}
 
 CHOICE=$(dialog --clear \
                 --backtitle "$BACKTITLE" \
