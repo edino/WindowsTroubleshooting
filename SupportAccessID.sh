@@ -40,3 +40,5 @@ clear
     esac
 done
 clear # clear after user pressed Cancel
+
+#this is the end
